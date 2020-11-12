@@ -12,4 +12,5 @@ RUN mkdir /build/orthanc/Build
 WORKDIR /build/orthanc/Build
 RUN cmake -DSTATIC_BUILD=ON -DCMAKE_BUILD_TYPE=Debug ../OrthancServer/
 RUN make
-RUN cp /build/orthanc/Build/Orthanc /usr/local/bin/
+RUN mv /build/orthanc/Build/Orthanc /usr/local/bin/
+RUN rm -rf /build/
