@@ -14,3 +14,4 @@ RUN cmake -DSTATIC_BUILD=ON -DCMAKE_BUILD_TYPE=Debug ../OrthancServer/
 RUN make
 RUN mv /build/orthanc/Build/Orthanc /usr/local/bin/
 RUN rm -rf /build/
+COPY docker-entrypoint.sh /
