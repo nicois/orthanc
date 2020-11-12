@@ -13,5 +13,6 @@ WORKDIR /build/orthanc/Build
 RUN cmake -DSTATIC_BUILD=ON -DCMAKE_BUILD_TYPE=Debug ../OrthancServer/
 RUN make
 RUN mv /build/orthanc/Build/Orthanc /usr/local/bin/
+RUN chmod +x /usr/local/bin/Orthanc
 RUN rm -rf /build/
 COPY docker-entrypoint.sh /
